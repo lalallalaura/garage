@@ -121,11 +121,14 @@ a {
     background:
         linear-gradient(
             90deg,
-            rgba(5,12,21,0.98) 0%,
-            rgba(5,12,21,0.90) 48%,
-            rgba(5,12,21,0.25) 100%
+            rgba(5, 12, 21, 0.98) 0%,
+            rgba(5, 12, 21, 0.85) 45%,
+            rgba(5, 12, 21, 0.25) 100%
         ),
-        linear-gradient(135deg, var(--blue-dark), var(--blue));
+        url("assets/images/hero-oficina.jpg");
+
+    background-size: cover;
+    background-position: center;
 }
 
 .hero::before {
