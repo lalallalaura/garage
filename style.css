@@ -1,0 +1,18 @@
+
+:root {
+    /* Identidade visual */
+    --blue-dark: #050C15;
+    --blue: #102B46;
+    --blue-light: #1C4265;
+
+    --red: #F20D27;
+    --red-hover: #CC0920;
+
+    --white: #F5F5F5;
+    --gray: #B8C2CE;
+    --gray-dark: #202832;
+
+    /* Tipografia */
+    --font-title: 'Barlow Condensed', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
