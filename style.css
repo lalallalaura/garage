@@ -1,6 +1,9 @@
+/* ==============================
+   VÉRTICE GARAGE
+   Identidade visual
+============================== */
 
 :root {
-    /* Identidade visual */
     --blue-dark: #050C15;
     --blue: #102B46;
     --blue-light: #1C4265;
@@ -12,7 +15,395 @@
     --gray: #B8C2CE;
     --gray-dark: #202832;
 
-    /* Tipografia */
     --font-title: 'Barlow Condensed', sans-serif;
     --font-body: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--blue-dark);
+    color: var(--white);
+    font-family: var(--font-body);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==============================
+   CABEÇALHO
+============================== */
+
+.header {
+    width: 100%;
+    background: rgba(5, 12, 21, 0.96);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    position: relative;
+    z-index: 10;
+}
+
+.header .container {
+    min-height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    font-family: var(--font-title);
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--red);
+}
+
+.navigation {
+    display: flex;
+    gap: 32px;
+}
+
+.navigation a {
+    font-size: 13px;
+    color: var(--gray);
+    transition: 0.3s;
+}
+
+.navigation a:hover {
+    color: var(--red);
+}
+
+.header-button,
+.button-primary {
+    background: var(--red);
+    color: white;
+    padding: 15px 23px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.header-button:hover,
+.button-primary:hover {
+    background: var(--red-hover);
+    transform: translateY(-3px);
+}
+
+/* ==============================
+   HERO / BANNER
+============================== */
+
+.hero {
+    min-height: 680px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5,12,21,0.98) 0%,
+            rgba(5,12,21,0.90) 48%,
+            rgba(5,12,21,0.25) 100%
+        ),
+        linear-gradient(135deg, var(--blue-dark), var(--blue));
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 150%;
+    background: var(--red);
+    right: 12%;
+    top: -20%;
+    transform: rotate(35deg);
+    opacity: 0.8;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 8px;
+    background: var(--red);
+    right: -30px;
+    bottom: 70px;
+    transform: rotate(-45deg);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 690px;
+    padding: 90px 0;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: var(--red);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 22px;
+}
+
+.hero h1,
+.services h2,
+.about h2,
+.contact h2 {
+    font-family: var(--font-title);
+    font-weight: 800;
+    line-height: 0.98;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 7vw, 82px);
+    margin-bottom: 25px;
+}
+
+.hero h1 span,
+.services h2 span,
+.about h2 span {
+    color: var(--red);
+}
+
+.hero-content > p {
+    max-width: 490px;
+    color: var(--gray);
+    line-height: 1.8;
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 18px;
+}
+
+.button-secondary {
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 700;
+    border-bottom: 2px solid var(--red);
+    padding: 15px 0;
+}
+
+/* ==============================
+   SERVIÇOS
+============================== */
+
+.services {
+    padding: 110px 0;
+    background: var(--white);
+    color: var(--blue-dark);
+}
+
+.services h2,
+.about h2 {
+    font-size: clamp(38px, 5vw, 58px);
+    max-width: 650px;
+    margin-bottom: 50px;
+}
+
+.services h2 span {
+    color: var(--blue);
+}
+
+.services .eyebrow {
+    color: var(--red);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.service-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E5E9;
+    border-bottom: 4px solid var(--blue);
+    padding: 30px 22px;
+    min-height: 190px;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+    border-bottom-color: var(--red);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+.service-card h3 {
+    font-family: var(--font-title);
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #68717D;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* ==============================
+   SOBRE
+============================== */
+
+.about {
+    padding: 110px 0;
+    background:
+        linear-gradient(120deg, var(--blue-dark), var(--blue));
+}
+
+.about h2 span {
+    display: block;
+}
+
+.about p {
+    max-width: 620px;
+    color: var(--gray);
+    line-height: 1.9;
+    font-size: 15px;
+}
+
+/* ==============================
+   CONTATO
+============================== */
+
+.contact {
+    padding: 100px 0;
+    text-align: center;
+    background: var(--gray-dark);
+}
+
+.contact h2 {
+    font-size: clamp(36px, 5vw, 55px);
+    margin-bottom: 20px;
+}
+
+.contact p {
+    color: var(--gray);
+    margin-bottom: 30px;
+}
+
+/* ==============================
+   RODAPÉ
+============================== */
+
+.footer {
+    background: var(--blue-dark);
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer p {
+    color: var(--gray);
+    font-size: 12px;
+}
+
+/* ==============================
+   RESPONSIVIDADE
+============================== */
+
+@media (max-width: 900px) {
+
+    .navigation {
+        gap: 15px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header-button {
+        display: none;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .header .container {
+        min-height: 75px;
+        flex-wrap: wrap;
+        padding: 15px 0;
+    }
+
+    .logo {
+        font-size: 26px;
+    }
+
+    .navigation {
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .navigation a {
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero-content {
+        padding: 75px 0;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-content > p {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .services,
+    .about {
+        padding: 75px 0;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        min-height: auto;
+    }
+
+    .contact {
+        padding: 75px 0;
+    }
+
 }
